@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUI Input dan Output</title>
+    <style>
+      /* Mengatur tampilan secara umum */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Container utama */
+      .container {
+        background-color: #d3d3d3;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+      }
+
+      /* Input text */
+      #inputText {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      /* Tombol Kirim */
+      #submitButton {
+        background-color: #f44336; /* Warna merah */
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #submitButton:hover {
+        background-color: #d32f2f; /* Warna merah lebih gelap saat hover */
+      }
+
+      /* Output label */
+      #outputLabel {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #ffeb3b; /* Warna kuning */
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Input teks -->
+      <input type="text" id="inputText" placeholder="Masukkan teks di sini" />
+
+      <!-- Tombol Kirim -->
+      <button id="submitButton">Submit/Kirim</button>
+
+      <!-- Output label -->
+      <div id="outputLabel"></div>
+    </div>
+
+    <script>
+      // Mendapatkan elemen-elemen dari DOM
+      const inputText = document.getElementById("inputText");
+      const submitButton = document.getElementById("submitButton");
+      const outputLabel = document.getElementById("outputLabel");
+
+      // Menambahkan event listener pada tombol Submit
+      submitButton.addEventListener("click", function () {
+        const inputValue = inputText.value.trim(); // Mengambil nilai input dan menghapus spasi tambahan
+
+        if (inputValue === "NAMA_PRAKTIKAN") {
+          outputLabel.textContent = "Halo NAMA_PRAKTIKAN"; // Menampilkan output jika input sesuai
+        } else if (inputValue === "") {
+          outputLabel.textContent = "Silakan masukkan teks!"; // Menangani input kosong
+        } else {
+          outputLabel.textContent = "Input tidak dikenali"; // Menangani input selain "NAMA_PRAKTIKAN"
+        }
+      });
+    </script>
+  </body>
+</html>
