@@ -1,0 +1,32 @@
+{
+  "members": [
+    {
+      "firstName": "MaulanaMuhammad Rifqi",
+      "lastName": "Al Baqi Ananta",
+      "gender": "male",
+      "age": 21,
+      "nim": "2311104005"
+    },
+    {
+      "firstName": "Ahmad Uffi",
+      "lastName": "Lestari Ma’ruf",
+      "gender": "male",
+      "age": 20,
+      "nim": "2311104015"
+    },
+    {
+      "firstName": "Rifki",
+      "lastName": "Taufikurrohman",
+      "gender": "Male",
+      "age": 19,
+      "nim": "2311104033"
+    },
+    {
+      "firstName": "Rifki",
+      "lastName": "Taufikurrohman",
+      "gender": "Male",
+      "age": 19,
+      "nim": "2311104033"
+    }
+  ]
+}
